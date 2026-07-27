@@ -78,6 +78,7 @@ export default function RootLayout({
         <PageLoader />
         <ScrollProgressBar />
         <div className="grain-overlay" />
+        <div className="casino-pattern-overlay" />
         <Navbar />
         <main id="main-content">{children}</main>
         <Footer />

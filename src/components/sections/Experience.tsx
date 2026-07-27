@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Briefcase, MapPin } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -15,7 +16,7 @@ export function Experience() {
           description="Real-time, player-facing roles that shaped how I communicate, solve problems, and stay composed under pressure."
         />
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-2">
           {experience.map((job, i) => (
             <Reveal key={job.id} delay={i * 0.1}>
               <article className="flex h-full flex-col rounded-2xl border border-border-subtle bg-surface p-7 sm:p-8">
@@ -47,6 +48,27 @@ export function Experience() {
                 </div>
 
                 <p className="mt-4 text-sm leading-relaxed text-muted">{job.summary}</p>
+
+                {job.photos && job.photos.length > 0 && (
+                  <div className="mt-5 grid grid-cols-2 gap-3">
+                    {job.photos.map((photo) => (
+                      <figure key={photo.src} className="flex flex-col gap-2">
+                        <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-border-subtle">
+                          <Image
+                            src={photo.src}
+                            alt={photo.alt}
+                            fill
+                            sizes="(min-width: 1024px) 220px, 45vw"
+                            className="object-cover"
+                          />
+                        </div>
+                        <figcaption className="text-xs leading-relaxed text-muted">
+                          {photo.caption}
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                )}
 
                 <div className="mt-5">
                   <h4 className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-muted">

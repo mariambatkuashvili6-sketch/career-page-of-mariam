@@ -3,6 +3,12 @@
 // existing object and editing the fields.
 // ────────────────────────────────────────────────────────────────
 
+export type ExperiencePhoto = {
+  src: string;
+  alt: string;
+  caption: string;
+};
+
 export type Experience = {
   id: string;
   company: string;
@@ -14,6 +20,7 @@ export type Experience = {
   achievements: string[];
   skillsGained: string[];
   current?: boolean;
+  photos?: ExperiencePhoto[];
 };
 
 export const experience: Experience[] = [
@@ -44,6 +51,20 @@ export const experience: Experience[] = [
       "Responsible Gaming Awareness",
     ],
     current: true,
+    photos: [
+      {
+        src: "/images/experience/evolution-crazy-pachinko.jpg",
+        alt: "Mariam hosting a live show game at Evolution Gaming",
+        caption:
+          "On set hosting a Crazy Pachinko-style show — one of Evolution's highest-energy formats, streamed live to players around the world.",
+      },
+      {
+        src: "/images/experience/evolution-blackjack.jpg",
+        alt: "Mariam in Blackjack dealer uniform at Evolution Gaming",
+        caption:
+          "In uniform for Blackjack, one of the core live table games I present daily — precision and pace, with a warm player experience in every hand.",
+      },
+    ],
   },
   {
     id: "hotel-genesis",
