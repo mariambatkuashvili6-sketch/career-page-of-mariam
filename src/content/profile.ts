@@ -21,9 +21,9 @@ export const profile = {
 
   photo: "/images/profile-v2.jpg",
   cv: "/cv/Mariam_Batkuashvili_Professional_CV.pdf",
-  introVideo: "/video/intro.mp4",
-  introVideoCaptions: "/video/intro.vtt",
-  introVideoPoster: "/images/video-poster.jpg",
+  introVideo: "/video/intro-v2.mp4",
+  introVideoCaptions: "/video/intro-v2.vtt",
+  introVideoPoster: "/images/video-poster-v2.jpg",
 
   bio: [
     "I'm a customer-facing professional with over two years of experience inside international iGaming and live casino operations, currently working as a Customer Interaction Specialist and Game Host at Evolution Gaming — one of the largest live casino providers in the world.",
