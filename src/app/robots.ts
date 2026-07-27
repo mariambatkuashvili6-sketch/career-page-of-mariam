@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://mariam-batkuashvili.example.com/sitemap.xml",
+    sitemap: "https://career-page-of-mariam.vercel.app/sitemap.xml",
   };
 }

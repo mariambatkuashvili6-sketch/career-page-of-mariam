@@ -19,7 +19,7 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const siteUrl = "https://mariam-batkuashvili.example.com";
+const siteUrl = "https://career-page-of-mariam.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -45,11 +45,20 @@ export const metadata: Metadata = {
     description: profile.heroSubheadline,
     url: siteUrl,
     siteName: profile.name,
+    images: [
+      {
+        url: profile.photo,
+        width: 1600,
+        height: 1600,
+        alt: `Portrait of ${profile.name}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${profile.name} | iGaming Support`,
     description: profile.heroSubheadline,
+    images: [profile.photo],
   },
   robots: {
     index: true,
